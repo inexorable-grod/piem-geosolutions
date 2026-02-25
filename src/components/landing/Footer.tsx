@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div className="lg:col-span-2">
-            <div className="font-display text-xl font-bold text-gradient-gold mb-2">
+            <div className="font-display text-xl font-bold text-gradient-orange mb-2">
               PIEM GeoSolutions
             </div>
             <p className="text-steel-400 text-sm font-body leading-relaxed max-w-sm">
@@ -18,7 +18,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs text-gold-400 font-medium uppercase tracking-widest mb-4">
+            <h4 className="text-xs text-orange-400 font-medium uppercase tracking-widest mb-4">
               Navigation
             </h4>
             <ul className="space-y-2">
@@ -26,7 +26,7 @@ export function Footer() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="text-sm text-steel-400 hover:text-gold-400 transition-colors font-body"
+                    className="text-sm text-steel-400 hover:text-orange-400 transition-colors font-body"
                   >
                     {item.label}
                   </a>
@@ -36,16 +36,16 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs text-gold-400 font-medium uppercase tracking-widest mb-4">
+            <h4 className="text-xs text-orange-400 font-medium uppercase tracking-widest mb-4">
               Contact
             </h4>
             <div className="space-y-2 text-sm text-steel-400 font-body">
               <p>{CONTACT_INFO.piem.phone}</p>
               <p>{CONTACT_INFO.petro.phone}</p>
-              <a href="https://www.piemgeosolutions.com" className="hover:text-gold-400 transition-colors block">
+              <a href="https://www.piemgeosolutions.com" className="hover:text-orange-400 transition-colors block">
                 piemgeosolutions.com
               </a>
-              <a href="https://www.petroexplorers.com" className="hover:text-gold-400 transition-colors block">
+              <a href="https://www.petroexplorers.com" className="hover:text-orange-400 transition-colors block">
                 petroexplorers.com
               </a>
             </div>
@@ -57,7 +57,7 @@ export function Footer() {
             &copy; {year} PIEM GeoSolutions LLC &amp; Petro-Explorers Inc. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <Link href="/login" className="text-xs text-steel-500 hover:text-gold-400 transition-colors">
+            <Link href="/login" className="text-xs text-steel-500 hover:text-orange-400 transition-colors">
               Admin Login
             </Link>
             <span className="text-steel-700">|</span>

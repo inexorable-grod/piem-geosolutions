@@ -29,16 +29,16 @@ export function ServicesSection() {
 
   return (
     <section id="services" className="py-24 lg:py-32 bg-[var(--surface)] relative overflow-hidden" ref={ref}>
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-gold-400/[0.03] to-transparent pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-orange-400/[0.03] to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="section-reveal text-center mb-16">
-          <span className="inline-block text-gold-400 text-xs tracking-widest uppercase font-medium mb-4 border border-gold-400/30 px-3 py-1 rounded-full">
+          <span className="inline-block text-orange-400 text-xs tracking-widest uppercase font-medium mb-4 border border-orange-400/30 px-3 py-1 rounded-full">
             Our Expertise
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text)] mb-4">
             Comprehensive{' '}
-            <span className="text-gradient-gold">Services</span>
+            <span className="text-gradient-orange">Services</span>
           </h2>
           <p className="text-[var(--muted)] max-w-xl mx-auto font-body">
             End-to-end solutions from exploration to production, integrating geoscience, engineering, and AI.
@@ -54,22 +54,22 @@ export function ServicesSection() {
             >
               <div
                 onClick={() => setSelected(service)}
-                className="group relative cursor-pointer h-full p-6 rounded-2xl border border-[var(--border)] bg-[var(--card)] hover:border-gold-400/40 hover:shadow-gold transition-all duration-300 overflow-hidden"
+                className="group relative cursor-pointer h-full p-6 rounded-2xl border border-[var(--border)] bg-[var(--card)] hover:border-orange-400/40 hover:shadow-orange transition-all duration-300 overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-gold-400/0 to-gold-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-400/0 to-orange-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                <div className="w-12 h-12 rounded-xl bg-gold-400/10 border border-gold-400/20 flex items-center justify-center text-gold-400 mb-4 group-hover:bg-gold-400/20 group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-orange-400/10 border border-orange-400/20 flex items-center justify-center text-orange-400 mb-4 group-hover:bg-orange-400/20 group-hover:scale-110 transition-all duration-300">
                   {ICONS[service.icon]}
                 </div>
 
-                <h3 className="font-display text-base font-semibold text-[var(--text)] mb-2 group-hover:text-gold-400 transition-colors">
+                <h3 className="font-display text-base font-semibold text-[var(--text)] mb-2 group-hover:text-orange-400 transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-sm text-[var(--muted)] font-body leading-relaxed mb-4">
                   {service.description}
                 </p>
 
-                <div className="flex items-center gap-1 text-gold-400 text-xs font-medium group-hover:gap-2 transition-all">
+                <div className="flex items-center gap-1 text-orange-400 text-xs font-medium group-hover:gap-2 transition-all">
                   View details <ArrowRight size={12} />
                 </div>
               </div>
@@ -92,10 +92,10 @@ export function ServicesSection() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-[var(--card)] border border-gold-400/20 rounded-2xl p-8 max-w-lg w-full shadow-gold-lg"
+              className="bg-[var(--card)] border border-orange-400/20 rounded-2xl p-8 max-w-lg w-full shadow-orange-lg"
             >
               <div className="flex items-start justify-between mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gold-400/10 flex items-center justify-center text-gold-400">
+                <div className="w-12 h-12 rounded-xl bg-orange-400/10 flex items-center justify-center text-orange-400">
                   {ICONS[selected.icon]}
                 </div>
                 <button
@@ -108,12 +108,12 @@ export function ServicesSection() {
               <h3 className="font-display text-xl font-bold text-[var(--text)] mb-1">
                 {selected.title}
               </h3>
-              <p className="text-sm text-gold-400 font-body italic mb-4">{selected.titleEs}</p>
+              <p className="text-sm text-orange-400 font-body italic mb-4">{selected.titleEs}</p>
               <p className="text-[var(--muted)] font-body text-sm mb-6">{selected.description}</p>
               <ul className="space-y-2">
                 {selected.features.map((f, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-[var(--text)]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold-400 mt-1.5 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-1.5 flex-shrink-0" />
                     {f}
                   </li>
                 ))}

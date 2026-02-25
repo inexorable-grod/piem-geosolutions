@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;900&family=Open+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,15 +6,15 @@
 
 :root {
   --bg:        #ffffff;
-  --surface:   #f8f9fa;
+  --surface:   #f2f4f8;
   --card:      #ffffff;
-  --border:    #e9ecef;
+  --border:    #e2e5ea;
   --text:      #0d0f12;
   --muted:     #6c757d;
-  --gold:      #d4a520;
-  --gold-light:#e8c04a;
-  --gold-dark: #8f6a0c;
-  --scrollbar-thumb: #d4a520;
+  --accent:    #FF671D;
+  --accent-light:#ffb380;
+  --accent-dark: #c44b0f;
+  --scrollbar-thumb: #FF671D;
   --scrollbar-track: #f0f0f0;
 }
 
@@ -25,10 +25,10 @@
   --border:    #21262d;
   --text:      #e6edf3;
   --muted:     #8b949e;
-  --gold:      #d4a520;
-  --gold-light:#f2d98a;
-  --gold-dark: #b88a10;
-  --scrollbar-thumb: #d4a520;
+  --accent:    #FF671D;
+  --accent-light:#ffb380;
+  --accent-dark: #e55a15;
+  --scrollbar-thumb: #FF671D;
   --scrollbar-track: #1c2128;
 }
 
@@ -43,7 +43,7 @@ html {
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -51,8 +51,8 @@ body {
 ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
 ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
 
-.text-gradient-gold {
-  background: linear-gradient(135deg, #d4a520 0%, #f2d98a 50%, #b88a10 100%);
+.text-gradient-orange {
+  background: linear-gradient(135deg, #FF671D 0%, #ffb380 50%, #c44b0f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -62,7 +62,7 @@ body {
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(212,165,32,0.15);
+  border: 1px solid rgba(255,103,29,0.15);
 }
 
 .dark .glass {
@@ -71,8 +71,8 @@ body {
 
 .seismic-bg {
   background-image:
-    linear-gradient(rgba(212,165,32,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212,165,32,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(255,103,29,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,103,29,0.04) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 

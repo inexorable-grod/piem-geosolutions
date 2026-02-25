@@ -29,7 +29,7 @@ export function HeroSection() {
         ctx.beginPath()
         const y = (canvas.height / (lines + 1)) * (i + 1)
         const alpha = 0.04 + (i / lines) * 0.06
-        ctx.strokeStyle = `rgba(212,165,32,${alpha})`
+        ctx.strokeStyle = `rgba(255,103,29,${alpha})`
         ctx.lineWidth = 1.5
         for (let x = 0; x < canvas.width; x += 2) {
           const freq  = 0.01 + i * 0.003
@@ -60,16 +60,16 @@ export function HeroSection() {
         className="absolute inset-0 w-full h-full pointer-events-none"
       />
       <div className="absolute inset-0 bg-dark-mesh pointer-events-none" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold-400/5 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-orange-400/5 blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-400/30 bg-gold-400/5 text-gold-400 text-xs font-medium tracking-widest uppercase mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-orange-400/30 bg-orange-400/5 text-orange-400 text-xs font-medium tracking-widest uppercase mb-8"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
           PIEM GeoSolutions &times; Petro-Explorers Joint Venture
         </motion.div>
 
@@ -80,7 +80,7 @@ export function HeroSection() {
           className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6"
         >
           Expert Solutions for{' '}
-          <span className="text-gradient-gold block mt-1">
+          <span className="text-gradient-orange block mt-1">
             the Hydrocarbon Industry
           </span>
         </motion.h1>
@@ -103,13 +103,13 @@ export function HeroSection() {
         >
           <a
             href="#services"
-            className="px-8 py-4 rounded-xl bg-gold-400 text-steel-900 font-semibold text-base hover:bg-gold-300 transition-all duration-300 shadow-gold hover:shadow-gold-lg hover:-translate-y-0.5"
+            className="px-8 py-4 rounded-xl bg-orange-400 text-steel-900 font-semibold text-base hover:bg-orange-300 transition-all duration-300 shadow-orange hover:shadow-orange-lg hover:-translate-y-0.5"
           >
             Explore Our Services
           </a>
           <a
             href="#contact"
-            className="px-8 py-4 rounded-xl border border-gold-400/40 text-gold-400 font-semibold text-base hover:border-gold-400 hover:bg-gold-400/10 transition-all duration-300"
+            className="px-8 py-4 rounded-xl border border-orange-400/40 text-orange-400 font-semibold text-base hover:border-orange-400 hover:bg-orange-400/10 transition-all duration-300"
           >
             Schedule a Consultation
           </a>
@@ -127,9 +127,9 @@ export function HeroSection() {
             { icon: <Globe size={18} />, value: '20', label: 'Countries' },
             { icon: <Globe size={18} />, value: '30+', label: 'Experts' },
           ].map((s, i) => (
-            <div key={i} className="glass rounded-xl p-4 text-center border border-gold-400/10">
-              <div className="flex justify-center text-gold-400 mb-2">{s.icon}</div>
-              <div className="font-display text-2xl font-bold text-gradient-gold">{s.value}</div>
+            <div key={i} className="glass rounded-xl p-4 text-center border border-orange-400/10">
+              <div className="flex justify-center text-orange-400 mb-2">{s.icon}</div>
+              <div className="font-display text-2xl font-bold text-gradient-orange">{s.value}</div>
               <div className="text-xs text-steel-400 font-body mt-1">{s.label}</div>
             </div>
           ))}
@@ -140,7 +140,7 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gold-400/60"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-orange-400/60"
       >
         <span className="text-xs tracking-widest uppercase font-body">Scroll</span>
         <ArrowDown size={16} className="animate-bounce" />

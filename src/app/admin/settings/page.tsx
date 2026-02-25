@@ -20,7 +20,7 @@ export default function SettingsPage() {
       {/* Company Info */}
       <div className="p-6 rounded-xl border border-dark-border bg-dark-card">
         <div className="flex items-center gap-2 mb-6">
-          <Building2 size={18} className="text-gold-400" />
+          <Building2 size={18} className="text-orange-400" />
           <h2 className="text-sm font-semibold text-steel-200">Company Information</h2>
         </div>
         <div className="grid sm:grid-cols-2 gap-4">
@@ -34,7 +34,7 @@ export default function SettingsPage() {
               <label className="block text-xs text-steel-400 uppercase tracking-wide mb-1">{field.label}</label>
               <input
                 defaultValue={field.value}
-                className="w-full px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-gold-400/50 transition-colors"
+                className="w-full px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-orange-400/50 transition-colors"
               />
             </div>
           ))}
@@ -44,7 +44,7 @@ export default function SettingsPage() {
       {/* Notifications */}
       <div className="p-6 rounded-xl border border-dark-border bg-dark-card">
         <div className="flex items-center gap-2 mb-6">
-          <Bell size={18} className="text-gold-400" />
+          <Bell size={18} className="text-orange-400" />
           <h2 className="text-sm font-semibold text-steel-200">Notifications</h2>
         </div>
         <div className="space-y-4">
@@ -59,7 +59,7 @@ export default function SettingsPage() {
               <input
                 type="checkbox"
                 defaultChecked={item.defaultChecked}
-                className="w-4 h-4 rounded border-dark-border bg-dark-surface text-gold-400 focus:ring-gold-400/30 cursor-pointer"
+                className="w-4 h-4 rounded border-dark-border bg-dark-surface text-orange-400 focus:ring-orange-400/30 cursor-pointer"
               />
             </label>
           ))}
@@ -69,13 +69,13 @@ export default function SettingsPage() {
       {/* Appearance */}
       <div className="p-6 rounded-xl border border-dark-border bg-dark-card">
         <div className="flex items-center gap-2 mb-6">
-          <Palette size={18} className="text-gold-400" />
+          <Palette size={18} className="text-orange-400" />
           <h2 className="text-sm font-semibold text-steel-200">Appearance</h2>
         </div>
         <div className="space-y-4">
           <div>
             <label className="block text-xs text-steel-400 uppercase tracking-wide mb-1">Default Theme</label>
-            <select className="w-full max-w-xs px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-gold-400/50 transition-colors">
+            <select className="w-full max-w-xs px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-orange-400/50 transition-colors">
               <option value="dark">Dark (Default)</option>
               <option value="light">Light</option>
               <option value="system">System</option>
@@ -84,7 +84,7 @@ export default function SettingsPage() {
           <div>
             <label className="block text-xs text-steel-400 uppercase tracking-wide mb-1">Accent Color</label>
             <div className="flex gap-2">
-              {['#d4a520', '#1a4a6b', '#2d7a4a', '#8f6a0c'].map((color) => (
+              {['#FF671D', '#1a4a6b', '#2d7a4a', '#c44b0f'].map((color) => (
                 <button
                   key={color}
                   className="w-8 h-8 rounded-lg border-2 border-transparent hover:border-white/30 transition-colors"
@@ -99,7 +99,7 @@ export default function SettingsPage() {
       {/* Security */}
       <div className="p-6 rounded-xl border border-dark-border bg-dark-card">
         <div className="flex items-center gap-2 mb-6">
-          <Shield size={18} className="text-gold-400" />
+          <Shield size={18} className="text-orange-400" />
           <h2 className="text-sm font-semibold text-steel-200">Security</h2>
         </div>
         <div className="space-y-4">
@@ -108,7 +108,7 @@ export default function SettingsPage() {
             <input
               type="password"
               placeholder="Enter current password"
-              className="w-full max-w-md px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-gold-400/50 transition-colors placeholder:text-steel-500"
+              className="w-full max-w-md px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-orange-400/50 transition-colors placeholder:text-steel-500"
             />
           </div>
           <div>
@@ -116,7 +116,7 @@ export default function SettingsPage() {
             <input
               type="password"
               placeholder="Enter new password"
-              className="w-full max-w-md px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-gold-400/50 transition-colors placeholder:text-steel-500"
+              className="w-full max-w-md px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-orange-400/50 transition-colors placeholder:text-steel-500"
             />
           </div>
           <div>
@@ -124,7 +124,7 @@ export default function SettingsPage() {
             <input
               type="password"
               placeholder="Confirm new password"
-              className="w-full max-w-md px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-gold-400/50 transition-colors placeholder:text-steel-500"
+              className="w-full max-w-md px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-orange-400/50 transition-colors placeholder:text-steel-500"
             />
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function SettingsPage() {
       <div className="flex items-center gap-3">
         <button
           onClick={handleSave}
-          className="flex items-center gap-2 px-6 py-2.5 rounded-lg bg-gold-400 text-steel-900 font-semibold text-sm hover:bg-gold-300 transition-all shadow-gold"
+          className="flex items-center gap-2 px-6 py-2.5 rounded-lg bg-orange-400 text-steel-900 font-semibold text-sm hover:bg-orange-300 transition-all shadow-orange"
         >
           <Save size={15} />
           Save Settings

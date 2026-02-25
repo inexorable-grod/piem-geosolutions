@@ -19,11 +19,11 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="section-reveal">
-            <span className="inline-block text-gold-400 text-xs tracking-widest uppercase font-medium mb-4 border border-gold-400/30 px-3 py-1 rounded-full">
+            <span className="inline-block text-orange-400 text-xs tracking-widest uppercase font-medium mb-4 border border-orange-400/30 px-3 py-1 rounded-full">
               Who We Are
             </span>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text)] mb-6 leading-tight">
-              Quienes <span className="text-gradient-gold">Somos</span>
+              Quienes <span className="text-gradient-orange">Somos</span>
             </h2>
             <p className="text-[var(--muted)] font-body leading-relaxed mb-4">
               PIEM Geosolutions LLC and Petro-Explorers have consolidated a strategic alliance
@@ -40,7 +40,7 @@ export function AboutSection() {
                 href="https://www.piemgeosolutions.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gold-400 text-sm font-medium border-b border-gold-400/30 hover:border-gold-400 transition-colors"
+                className="text-orange-400 text-sm font-medium border-b border-orange-400/30 hover:border-orange-400 transition-colors"
               >
                 piemgeosolutions.com &rarr;
               </a>
@@ -48,7 +48,7 @@ export function AboutSection() {
                 href="https://www.petroexplorers.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gold-400 text-sm font-medium border-b border-gold-400/30 hover:border-gold-400 transition-colors"
+                className="text-orange-400 text-sm font-medium border-b border-orange-400/30 hover:border-orange-400 transition-colors"
               >
                 petroexplorers.com &rarr;
               </a>
@@ -59,13 +59,13 @@ export function AboutSection() {
             {COMPANY_STATS.map((stat, i) => (
               <div
                 key={i}
-                className="group p-6 rounded-2xl border border-[var(--border)] bg-[var(--card)] hover:border-gold-400/40 hover:shadow-gold transition-all duration-400 text-center"
+                className="group p-6 rounded-2xl border border-[var(--border)] bg-[var(--card)] hover:border-orange-400/40 hover:shadow-orange transition-all duration-400 text-center"
               >
-                <div className="font-display text-4xl font-bold text-gradient-gold mb-2">
+                <div className="font-display text-4xl font-bold text-gradient-orange mb-2">
                   {stat.value}{stat.suffix}
                 </div>
                 <div className="text-sm text-[var(--muted)] font-body">{stat.label}</div>
-                <div className="text-xs text-gold-400/60 font-body italic mt-1">{stat.labelEs}</div>
+                <div className="text-xs text-orange-400/60 font-body italic mt-1">{stat.labelEs}</div>
               </div>
             ))}
           </div>

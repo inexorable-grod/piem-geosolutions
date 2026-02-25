@@ -21,8 +21,8 @@ export default async function AdminDashboard() {
       label: 'Total Users',
       value: MOCK_USERS.length,
       icon: <Users size={20} />,
-      color: 'text-gold-400',
-      bg: 'bg-gold-400/10 border-gold-400/20',
+      color: 'text-orange-400',
+      bg: 'bg-orange-400/10 border-orange-400/20',
     },
     {
       label: 'Countries',
@@ -64,10 +64,10 @@ export default async function AdminDashboard() {
       <div className="bg-dark-card border border-dark-border rounded-xl overflow-hidden">
         <div className="px-6 py-4 border-b border-dark-border flex items-center justify-between">
           <h2 className="font-display text-sm font-semibold text-steel-200 flex items-center gap-2">
-            <FolderKanban size={16} className="text-gold-400" />
+            <FolderKanban size={16} className="text-orange-400" />
             Recent Projects
           </h2>
-          <a href="/admin/projects" className="text-xs text-gold-400 hover:text-gold-300">View all &rarr;</a>
+          <a href="/admin/projects" className="text-xs text-orange-400 hover:text-orange-300">View all &rarr;</a>
         </div>
         <div className="divide-y divide-dark-border">
           {MOCK_PROJECTS.map((project) => (
@@ -79,7 +79,7 @@ export default async function AdminDashboard() {
               <div className="flex items-center gap-3">
                 <div className="hidden sm:flex items-center gap-2">
                   <div className="w-20 h-1.5 rounded-full bg-dark-border overflow-hidden">
-                    <div className="h-full rounded-full bg-gold-400 transition-all duration-500" style={{ width: `${project.progress}%` }} />
+                    <div className="h-full rounded-full bg-orange-400 transition-all duration-500" style={{ width: `${project.progress}%` }} />
                   </div>
                   <span className="text-xs text-steel-400">{project.progress}%</span>
                 </div>
@@ -100,9 +100,9 @@ export default async function AdminDashboard() {
           { href: '/admin/users', label: 'User Management', desc: 'Add, edit or remove portal users', icon: <Users size={18} /> },
           { href: '/admin/analytics', label: 'Analytics', desc: 'View KPIs and performance metrics', icon: <TrendingUp size={18} /> },
         ].map((item, i) => (
-          <a key={i} href={item.href} className="group p-5 rounded-xl border border-dark-border bg-dark-card hover:border-gold-400/30 hover:shadow-gold transition-all duration-300">
-            <div className="text-gold-400 mb-3 group-hover:scale-110 transition-transform">{item.icon}</div>
-            <h3 className="text-sm font-semibold text-steel-200 mb-1 group-hover:text-gold-400 transition-colors">{item.label}</h3>
+          <a key={i} href={item.href} className="group p-5 rounded-xl border border-dark-border bg-dark-card hover:border-orange-400/30 hover:shadow-orange transition-all duration-300">
+            <div className="text-orange-400 mb-3 group-hover:scale-110 transition-transform">{item.icon}</div>
+            <h3 className="text-sm font-semibold text-steel-200 mb-1 group-hover:text-orange-400 transition-colors">{item.label}</h3>
             <p className="text-xs text-steel-500">{item.desc}</p>
           </a>
         ))}

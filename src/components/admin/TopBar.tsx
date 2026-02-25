@@ -11,7 +11,7 @@ export function AdminTopBar() {
   return (
     <header className="h-16 flex items-center justify-between px-6 border-b border-dark-border bg-dark-surface flex-shrink-0">
       <div className="flex items-center gap-3">
-        <Link href="/" className="lg:hidden font-display text-sm font-bold text-gradient-gold">
+        <Link href="/" className="lg:hidden font-display text-sm font-bold text-gradient-orange">
           PIEM
         </Link>
         <div className="hidden lg:block">
@@ -24,12 +24,12 @@ export function AdminTopBar() {
         <ThemeToggle />
         <button className="relative p-2 rounded-lg text-steel-400 hover:text-steel-200 hover:bg-dark-card transition-colors">
           <Bell size={16} />
-          <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-gold-400" />
+          <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-orange-400" />
         </button>
 
         <div className="flex items-center gap-2 pl-3 border-l border-dark-border">
-          <div className="w-8 h-8 rounded-full bg-gold-400/20 border border-gold-400/30 flex items-center justify-center">
-            <User size={14} className="text-gold-400" />
+          <div className="w-8 h-8 rounded-full bg-orange-400/20 border border-orange-400/30 flex items-center justify-center">
+            <User size={14} className="text-orange-400" />
           </div>
           <div className="hidden sm:block">
             <p className="text-xs font-medium text-steel-200">{(user?.name as string) || 'Admin'}</p>

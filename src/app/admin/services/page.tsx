@@ -45,7 +45,7 @@ export default function ServicesPage() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search services..."
-          className="w-full pl-9 pr-4 py-2.5 rounded-lg bg-dark-card border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-gold-400/50 transition-colors placeholder:text-steel-500"
+          className="w-full pl-9 pr-4 py-2.5 rounded-lg bg-dark-card border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-orange-400/50 transition-colors placeholder:text-steel-500"
         />
       </div>
 
@@ -54,24 +54,24 @@ export default function ServicesPage() {
           <div
             key={service.id}
             className={`p-5 rounded-xl border bg-dark-card transition-all duration-300 ${
-              service.isVisible ? 'border-gold-400/20' : 'border-dark-border opacity-60'
+              service.isVisible ? 'border-orange-400/20' : 'border-dark-border opacity-60'
             }`}
           >
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-gold-400/10 border border-gold-400/20 flex items-center justify-center text-gold-400">
+                <div className="w-10 h-10 rounded-lg bg-orange-400/10 border border-orange-400/20 flex items-center justify-center text-orange-400">
                   {ICONS[service.icon]}
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-steel-100">{service.title}</h3>
-                  <p className="text-xs text-gold-400/60 italic">{service.titleEs}</p>
+                  <p className="text-xs text-orange-400/60 italic">{service.titleEs}</p>
                 </div>
               </div>
               <button
                 onClick={() => toggleVisibility(service.id)}
                 className={`p-2 rounded-lg transition-all ${
                   service.isVisible
-                    ? 'text-gold-400 hover:bg-gold-400/10'
+                    ? 'text-orange-400 hover:bg-orange-400/10'
                     : 'text-steel-500 hover:bg-steel-500/10'
                 }`}
                 title={service.isVisible ? 'Hide from landing page' : 'Show on landing page'}
@@ -83,7 +83,7 @@ export default function ServicesPage() {
             <p className="text-xs text-steel-400 mb-3">{service.description}</p>
 
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-xs px-2 py-0.5 rounded-full bg-gold-400/10 text-gold-400 border border-gold-400/20">
+              <span className="text-xs px-2 py-0.5 rounded-full bg-orange-400/10 text-orange-400 border border-orange-400/20">
                 {service.category.replace('_', ' ')}
               </span>
               <span className="text-xs text-steel-500">{service.features.length} features</span>
@@ -92,7 +92,7 @@ export default function ServicesPage() {
             <ul className="space-y-1">
               {service.features.map((f, i) => (
                 <li key={i} className="text-xs text-steel-400 flex items-center gap-1.5">
-                  <span className="w-1 h-1 rounded-full bg-gold-400/40 flex-shrink-0" />
+                  <span className="w-1 h-1 rounded-full bg-orange-400/40 flex-shrink-0" />
                   {f}
                 </li>
               ))}

@@ -97,8 +97,8 @@ export class ReportGeneratorAgent {
   <meta charset="UTF-8">
   <title>${title}</title>
   <style>
-    body { font-family: 'Outfit', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; }
-    h1 { color: #d4a520; border-bottom: 2px solid #d4a520; padding-bottom: 10px; }
+    body { font-family: 'Open Sans', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; color: #333; }
+    h1 { color: #FF671D; border-bottom: 2px solid #FF671D; padding-bottom: 10px; }
     h2 { color: #495057; margin-top: 30px; }
     .meta { color: #868e96; font-size: 0.85em; margin-bottom: 30px; }
     .section { margin-bottom: 20px; }

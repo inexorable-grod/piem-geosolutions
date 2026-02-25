@@ -125,7 +125,7 @@ export const TEAM_DEPARTMENTS = [
   {
     id: 'static',
     name: 'Static Model',
-    color: '#d4a520',
+    color: '#FF671D',
     members: [
       '3 Geological Engineers',
       'MSc. Geologist',
@@ -136,19 +136,19 @@ export const TEAM_DEPARTMENTS = [
   {
     id: 'dynamic',
     name: 'Dynamic Model',
-    color: '#b88a10',
+    color: '#e55a15',
     members: ['4 Petroleum Engineers', 'MSc. Petroleum', '4 Geological Engineers'],
   },
   {
     id: 'reserves',
     name: 'Reserve Evaluation',
-    color: '#8f6a0c',
+    color: '#c44b0f',
     members: ['2 Petroleum Engineers'],
   },
   {
     id: 'production',
     name: 'Production',
-    color: '#d4a520',
+    color: '#FF671D',
     members: ['4 Petroleum Engineers', 'Geological Engineer'],
   },
   {

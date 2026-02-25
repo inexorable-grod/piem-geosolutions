@@ -19,7 +19,7 @@ const CLIENTS_DATA = [
 
 const SECTOR_COLORS: Record<string, string> = {
   'E&P': 'text-blue-400 bg-blue-400/10 border-blue-400/20',
-  'NOC': 'text-gold-400 bg-gold-400/10 border-gold-400/20',
+  'NOC': 'text-orange-400 bg-orange-400/10 border-orange-400/20',
   'Major': 'text-green-400 bg-green-400/10 border-green-400/20',
 }
 
@@ -46,7 +46,7 @@ export default function ClientsPage() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search clients..."
-          className="w-full pl-9 pr-4 py-2.5 rounded-lg bg-dark-card border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-gold-400/50 transition-colors placeholder:text-steel-500"
+          className="w-full pl-9 pr-4 py-2.5 rounded-lg bg-dark-card border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-orange-400/50 transition-colors placeholder:text-steel-500"
         />
       </div>
 
@@ -54,11 +54,11 @@ export default function ClientsPage() {
         {filtered.map((client) => (
           <div
             key={client.id}
-            className="p-5 rounded-xl border border-dark-border bg-dark-card hover:border-gold-400/30 hover:shadow-gold transition-all duration-300"
+            className="p-5 rounded-xl border border-dark-border bg-dark-card hover:border-orange-400/30 hover:shadow-orange transition-all duration-300"
           >
             <div className="flex items-start justify-between mb-3">
-              <div className="w-10 h-10 rounded-lg bg-gold-400/10 border border-gold-400/20 flex items-center justify-center">
-                <Building2 size={18} className="text-gold-400" />
+              <div className="w-10 h-10 rounded-lg bg-orange-400/10 border border-orange-400/20 flex items-center justify-center">
+                <Building2 size={18} className="text-orange-400" />
               </div>
               <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${SECTOR_COLORS[client.sector] || 'text-steel-400 bg-steel-400/10 border-steel-400/20'}`}>
                 {client.sector}
@@ -69,11 +69,11 @@ export default function ClientsPage() {
 
             <div className="space-y-1.5 mt-3">
               <div className="flex items-center gap-1.5 text-xs text-steel-400">
-                <Globe size={12} className="text-gold-400" />
+                <Globe size={12} className="text-orange-400" />
                 {client.country}
               </div>
               <div className="flex items-center gap-1.5 text-xs text-steel-400">
-                <FolderKanban size={12} className="text-gold-400" />
+                <FolderKanban size={12} className="text-orange-400" />
                 {client.projectCount} projects
               </div>
               <p className="text-xs text-steel-500">Client since {client.since}</p>

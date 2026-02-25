@@ -14,12 +14,12 @@ export function ClientsSection() {
     <section id="clients" className="py-24 bg-[var(--surface)] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <span className="inline-block text-gold-400 text-xs tracking-widest uppercase font-medium mb-4 border border-gold-400/30 px-3 py-1 rounded-full">
+          <span className="inline-block text-orange-400 text-xs tracking-widest uppercase font-medium mb-4 border border-orange-400/30 px-3 py-1 rounded-full">
             Our Clients
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-[var(--text)] mb-3">
             Technology Proven in{' '}
-            <span className="text-gradient-gold">20 Countries</span>
+            <span className="text-gradient-orange">20 Countries</span>
           </h2>
           <p className="text-[var(--muted)] font-body">
             Trusted by leading operators and independents worldwide
@@ -31,7 +31,7 @@ export function ClientsSection() {
             {[...CLIENT_NAMES, ...CLIENT_NAMES].map((name, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 px-5 py-2.5 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--muted)] text-sm font-medium hover:border-gold-400/40 hover:text-gold-400 transition-all duration-300 whitespace-nowrap"
+                className="flex-shrink-0 px-5 py-2.5 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--muted)] text-sm font-medium hover:border-orange-400/40 hover:text-orange-400 transition-all duration-300 whitespace-nowrap"
               >
                 {name}
               </div>

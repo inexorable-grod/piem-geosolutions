@@ -43,7 +43,7 @@ export default function ProjectsPage() {
           <h1 className="font-display text-2xl font-bold text-steel-100">Projects</h1>
           <p className="text-sm text-steel-400 mt-1">{projects.length} total &middot; {projects.filter(p => p.status === 'active').length} active</p>
         </div>
-        <button className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gold-400 text-steel-900 font-semibold text-sm hover:bg-gold-300 transition-all shadow-gold">
+        <button className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-orange-400 text-steel-900 font-semibold text-sm hover:bg-orange-300 transition-all shadow-orange">
           <Plus size={15} /> New Project
         </button>
       </div>
@@ -52,19 +52,19 @@ export default function ProjectsPage() {
         <div className="relative">
           <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-steel-500" />
           <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search projects..."
-            className="pl-8 pr-4 py-2 rounded-lg bg-dark-card border border-dark-border text-steel-200 text-sm w-56 focus:outline-none focus:border-gold-400/50 transition-colors" />
+            className="pl-8 pr-4 py-2 rounded-lg bg-dark-card border border-dark-border text-steel-200 text-sm w-56 focus:outline-none focus:border-orange-400/50 transition-colors" />
         </div>
         {['all', 'active', 'completed', 'on_hold', 'proposal'].map((s) => (
           <button key={s} onClick={() => setFilter(s)}
             className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-              filter === s ? 'bg-gold-400/10 text-gold-400 border border-gold-400/30' : 'border border-dark-border text-steel-400 hover:border-steel-600'
+              filter === s ? 'bg-orange-400/10 text-orange-400 border border-orange-400/30' : 'border border-dark-border text-steel-400 hover:border-steel-600'
             }`}>{s === 'all' ? 'All' : s.replace('_', ' ')}</button>
         ))}
       </div>
 
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-4">
         {filtered.map((project) => (
-          <div key={project.id} className="p-5 rounded-xl border border-dark-border bg-dark-card hover:border-gold-400/30 hover:shadow-gold transition-all duration-300">
+          <div key={project.id} className="p-5 rounded-xl border border-dark-border bg-dark-card hover:border-orange-400/30 hover:shadow-orange transition-all duration-300">
             <div className="flex items-start justify-between mb-4">
               <div className="flex-1 min-w-0">
                 <h3 className="text-sm font-semibold text-steel-100 truncate">{project.name}</h3>
@@ -76,10 +76,10 @@ export default function ProjectsPage() {
             </div>
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-1.5 text-xs text-steel-400">
-                <Globe size={12} className="text-gold-400" /> {project.client} &middot; {project.country}
+                <Globe size={12} className="text-orange-400" /> {project.client} &middot; {project.country}
               </div>
               <div className="flex items-center gap-1.5 text-xs text-steel-400">
-                <Calendar size={12} className="text-gold-400" />
+                <Calendar size={12} className="text-orange-400" />
                 {new Date(project.startDate).toLocaleDateString()}
                 {project.endDate && ` → ${new Date(project.endDate).toLocaleDateString()}`}
               </div>
@@ -87,10 +87,10 @@ export default function ProjectsPage() {
             <div>
               <div className="flex items-center justify-between text-xs mb-1.5">
                 <span className="text-steel-400">Progress</span>
-                <span className="text-gold-400 font-medium">{project.progress}%</span>
+                <span className="text-orange-400 font-medium">{project.progress}%</span>
               </div>
               <div className="h-1.5 rounded-full bg-dark-border overflow-hidden">
-                <div className="h-full rounded-full bg-gradient-to-r from-gold-600 to-gold-400 transition-all duration-700" style={{ width: `${project.progress}%` }} />
+                <div className="h-full rounded-full bg-gradient-to-r from-orange-600 to-orange-400 transition-all duration-700" style={{ width: `${project.progress}%` }} />
               </div>
             </div>
             {project.value && (

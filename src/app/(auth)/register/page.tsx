@@ -20,18 +20,18 @@ export default function RegisterPage() {
       <div className="absolute inset-0 bg-dark-mesh pointer-events-none" />
       <div className="relative z-10 w-full max-w-md">
         <div className="text-center mb-10">
-          <div className="font-display text-3xl font-bold text-gradient-gold mb-1">PIEM</div>
+          <div className="font-display text-3xl font-bold text-gradient-orange mb-1">PIEM</div>
           <p className="text-xs text-steel-400 tracking-widest uppercase">Access Request</p>
         </div>
-        <div className="glass rounded-2xl p-8 border border-gold-400/15 shadow-gold">
+        <div className="glass rounded-2xl p-8 border border-orange-400/15 shadow-orange">
           {submitted ? (
             <div className="text-center py-8">
-              <CheckCircle size={48} className="text-gold-400 mx-auto mb-4" />
+              <CheckCircle size={48} className="text-orange-400 mx-auto mb-4" />
               <h2 className="font-display text-lg font-semibold text-white mb-2">Request Submitted</h2>
               <p className="text-sm text-steel-400 font-body mb-6">
                 An administrator will review your request and send you access credentials within 24 hours.
               </p>
-              <Link href="/login" className="text-gold-400 hover:text-gold-300 text-sm">
+              <Link href="/login" className="text-orange-400 hover:text-orange-300 text-sm">
                 &larr; Back to login
               </Link>
             </div>
@@ -57,7 +57,7 @@ export default function RegisterPage() {
                       type={field.type}
                       name={field.name}
                       placeholder={field.placeholder}
-                      className="w-full px-4 py-3 rounded-lg bg-dark-surface border border-dark-border text-white text-sm font-body focus:outline-none focus:border-gold-400/60 focus:ring-1 focus:ring-gold-400/20 transition-colors placeholder:text-steel-500"
+                      className="w-full px-4 py-3 rounded-lg bg-dark-surface border border-dark-border text-white text-sm font-body focus:outline-none focus:border-orange-400/60 focus:ring-1 focus:ring-orange-400/20 transition-colors placeholder:text-steel-500"
                     />
                   </div>
                 ))}
@@ -67,7 +67,7 @@ export default function RegisterPage() {
                   </label>
                   <select
                     name="role"
-                    className="w-full px-4 py-3 rounded-lg bg-dark-surface border border-dark-border text-white text-sm font-body focus:outline-none focus:border-gold-400/60 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-dark-surface border border-dark-border text-white text-sm font-body focus:outline-none focus:border-orange-400/60 transition-colors"
                   >
                     <option value="viewer">Client / Viewer</option>
                     <option value="analyst">Analyst</option>
@@ -76,7 +76,7 @@ export default function RegisterPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-lg bg-gold-400 text-steel-900 font-semibold text-sm hover:bg-gold-300 transition-all disabled:opacity-60 shadow-gold mt-2"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-lg bg-orange-400 text-steel-900 font-semibold text-sm hover:bg-orange-300 transition-all disabled:opacity-60 shadow-orange mt-2"
                 >
                   {loading ? (
                     <span className="w-4 h-4 border-2 border-steel-900/40 border-t-steel-900 rounded-full animate-spin" />
@@ -88,7 +88,7 @@ export default function RegisterPage() {
               </form>
               <p className="text-center mt-5 text-sm text-steel-500">
                 Already have access?{' '}
-                <Link href="/login" className="text-gold-400 hover:text-gold-300">
+                <Link href="/login" className="text-orange-400 hover:text-orange-300">
                   Sign In
                 </Link>
               </p>

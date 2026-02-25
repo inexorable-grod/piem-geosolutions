@@ -23,16 +23,16 @@ const projectsByYear = [
 ]
 
 const byRegion = [
-  { name: 'Latin America', value: 65, color: '#d4a520' },
-  { name: 'North America',  value: 18, color: '#b88a10' },
-  { name: 'Middle East',    value: 10, color: '#8f6a0c' },
-  { name: 'Asia Pacific',   value: 7,  color: '#6b4e0a' },
+  { name: 'Latin America', value: 65, color: '#FF671D' },
+  { name: 'North America',  value: 18, color: '#e55a15' },
+  { name: 'Middle East',    value: 10, color: '#c44b0f' },
+  { name: 'Asia Pacific',   value: 7,  color: '#993a0b' },
 ]
 
 const CHART_TOOLTIP = {
   contentStyle: {
     background: '#161b22',
-    border: '1px solid rgba(212,165,32,0.2)',
+    border: '1px solid rgba(255,103,29,0.2)',
     borderRadius: '8px',
     fontSize: '12px',
     color: '#e6edf3',
@@ -56,7 +56,7 @@ export default function AnalyticsPage() {
         ].map((kpi, i) => (
           <div key={i} className="p-5 rounded-xl border border-dark-border bg-dark-card">
             <p className="text-xs text-steel-400 mb-2">{kpi.label}</p>
-            <p className="font-display text-2xl font-bold text-gradient-gold">{kpi.value}</p>
+            <p className="font-display text-2xl font-bold text-gradient-orange">{kpi.value}</p>
             <p className={`text-xs mt-1 ${kpi.delta.startsWith('+') ? 'text-green-400' : 'text-red-400'}`}>{kpi.delta} vs last year</p>
           </div>
         ))}
@@ -71,7 +71,7 @@ export default function AnalyticsPage() {
               <XAxis dataKey="name" tick={{ fill: '#8b949e', fontSize: 11 }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fill: '#8b949e', fontSize: 11 }} axisLine={false} tickLine={false} />
               <Tooltip contentStyle={CHART_TOOLTIP.contentStyle} />
-              <Bar dataKey="value" fill="#d4a520" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="value" fill="#FF671D" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -84,7 +84,7 @@ export default function AnalyticsPage() {
               <XAxis dataKey="year" tick={{ fill: '#8b949e', fontSize: 11 }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fill: '#8b949e', fontSize: 11 }} axisLine={false} tickLine={false} />
               <Tooltip contentStyle={CHART_TOOLTIP.contentStyle} />
-              <Line type="monotone" dataKey="projects" stroke="#d4a520" strokeWidth={2} dot={{ fill: '#d4a520', r: 4 }} />
+              <Line type="monotone" dataKey="projects" stroke="#FF671D" strokeWidth={2} dot={{ fill: '#FF671D', r: 4 }} />
               <Line type="monotone" dataKey="revenue" stroke="#1a4a6b" strokeWidth={2} dot={{ fill: '#1a4a6b', r: 4 }} />
               <Legend wrapperStyle={{ fontSize: '11px', color: '#8b949e' }} />
             </LineChart>

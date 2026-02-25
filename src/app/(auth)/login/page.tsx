@@ -38,11 +38,11 @@ function LoginForm() {
 
       <div className="relative z-10 w-full max-w-md">
         <div className="text-center mb-10">
-          <div className="font-display text-3xl font-bold text-gradient-gold mb-1">PIEM</div>
+          <div className="font-display text-3xl font-bold text-gradient-orange mb-1">PIEM</div>
           <p className="text-xs text-steel-400 tracking-widest uppercase">GeoSolutions Admin</p>
         </div>
 
-        <div className="glass rounded-2xl p-8 border border-gold-400/15 shadow-gold">
+        <div className="glass rounded-2xl p-8 border border-orange-400/15 shadow-orange">
           <h1 className="font-display text-xl font-semibold text-white mb-1">Sign In</h1>
           <p className="text-sm text-steel-400 font-body mb-8">Access the administration panel</p>
 
@@ -63,7 +63,7 @@ function LoginForm() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg bg-dark-surface border border-dark-border text-white text-sm font-body focus:outline-none focus:border-gold-400/60 focus:ring-1 focus:ring-gold-400/20 transition-colors placeholder:text-steel-500"
+                className="w-full px-4 py-3 rounded-lg bg-dark-surface border border-dark-border text-white text-sm font-body focus:outline-none focus:border-orange-400/60 focus:ring-1 focus:ring-orange-400/20 transition-colors placeholder:text-steel-500"
                 placeholder="you@piemgeosolutions.com"
                 autoComplete="email"
               />
@@ -78,7 +78,7 @@ function LoginForm() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 pr-10 rounded-lg bg-dark-surface border border-dark-border text-white text-sm font-body focus:outline-none focus:border-gold-400/60 focus:ring-1 focus:ring-gold-400/20 transition-colors placeholder:text-steel-500"
+                  className="w-full px-4 py-3 pr-10 rounded-lg bg-dark-surface border border-dark-border text-white text-sm font-body focus:outline-none focus:border-orange-400/60 focus:ring-1 focus:ring-orange-400/20 transition-colors placeholder:text-steel-500"
                   placeholder="••••••••••"
                   autoComplete="current-password"
                 />
@@ -94,7 +94,7 @@ function LoginForm() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-lg bg-gold-400 text-steel-900 font-semibold text-sm hover:bg-gold-300 transition-all duration-300 disabled:opacity-60 shadow-gold"
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-lg bg-orange-400 text-steel-900 font-semibold text-sm hover:bg-orange-300 transition-all duration-300 disabled:opacity-60 shadow-orange"
             >
               {loading ? (
                 <span className="w-4 h-4 border-2 border-steel-900/40 border-t-steel-900 rounded-full animate-spin" />
@@ -106,10 +106,10 @@ function LoginForm() {
           </form>
 
           <div className="mt-6 pt-6 border-t border-dark-border flex items-center justify-between text-sm">
-            <Link href="/" className="text-steel-400 hover:text-gold-400 transition-colors">
+            <Link href="/" className="text-steel-400 hover:text-orange-400 transition-colors">
               &larr; Back to site
             </Link>
-            <Link href="/register" className="text-gold-400 hover:text-gold-300 transition-colors">
+            <Link href="/register" className="text-orange-400 hover:text-orange-300 transition-colors">
               Request access &rarr;
             </Link>
           </div>

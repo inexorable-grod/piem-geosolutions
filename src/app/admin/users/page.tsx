@@ -5,7 +5,7 @@ import { User } from '@/types'
 import { Plus, Edit2, Trash2, Search } from 'lucide-react'
 
 const ROLE_CONFIG: Record<string, { label: string; color: string }> = {
-  admin:   { label: 'Admin',   color: 'text-gold-400 bg-gold-400/10 border-gold-400/20' },
+  admin:   { label: 'Admin',   color: 'text-orange-400 bg-orange-400/10 border-orange-400/20' },
   analyst: { label: 'Analyst', color: 'text-blue-400 bg-blue-400/10 border-blue-400/20' },
   viewer:  { label: 'Viewer',  color: 'text-green-400 bg-green-400/10 border-green-400/20' },
   client:  { label: 'Client',  color: 'text-purple-400 bg-purple-400/10 border-purple-400/20' },
@@ -48,7 +48,7 @@ export default function UsersPage() {
         </div>
         <button
           onClick={() => { setEditUser(null); setShowForm(true) }}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gold-400 text-steel-900 font-semibold text-sm hover:bg-gold-300 transition-all shadow-gold"
+          className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-orange-400 text-steel-900 font-semibold text-sm hover:bg-orange-300 transition-all shadow-orange"
         >
           <Plus size={15} /> Add User
         </button>
@@ -60,7 +60,7 @@ export default function UsersPage() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search users..."
-          className="w-full pl-9 pr-4 py-2.5 rounded-lg bg-dark-card border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-gold-400/50 transition-colors placeholder:text-steel-500"
+          className="w-full pl-9 pr-4 py-2.5 rounded-lg bg-dark-card border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-orange-400/50 transition-colors placeholder:text-steel-500"
         />
       </div>
 
@@ -109,7 +109,7 @@ export default function UsersPage() {
                       <div className="flex items-center gap-1">
                         <button
                           onClick={() => { setEditUser(user); setShowForm(true) }}
-                          className="p-1.5 rounded-lg text-steel-400 hover:text-gold-400 hover:bg-gold-400/10 transition-all"
+                          className="p-1.5 rounded-lg text-steel-400 hover:text-orange-400 hover:bg-orange-400/10 transition-all"
                           title="Edit"
                         ><Edit2 size={13} /></button>
                         {user.id !== 'u0' && (
@@ -131,7 +131,7 @@ export default function UsersPage() {
 
       {showForm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={() => setShowForm(false)}>
-          <div className="bg-dark-card border border-gold-400/20 rounded-2xl p-6 w-full max-w-md shadow-gold-lg" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-dark-card border border-orange-400/20 rounded-2xl p-6 w-full max-w-md shadow-orange-lg" onClick={(e) => e.stopPropagation()}>
             <h2 className="font-display text-lg font-semibold text-steel-100 mb-6">{editUser ? 'Edit User' : 'Add New User'}</h2>
             <form className="space-y-4" onSubmit={(e) => {
               e.preventDefault()
@@ -157,13 +157,13 @@ export default function UsersPage() {
                 <div key={f.name}>
                   <label className="block text-xs text-steel-400 uppercase tracking-wide mb-1">{f.label}</label>
                   <input required={f.name !== 'company' && f.name !== 'country'} name={f.name} type={f.type} defaultValue={f.default || ''}
-                    className="w-full px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-gold-400/50 transition-colors" />
+                    className="w-full px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-orange-400/50 transition-colors" />
                 </div>
               ))}
               <div>
                 <label className="block text-xs text-steel-400 uppercase tracking-wide mb-1">Role</label>
                 <select name="role" defaultValue={editUser?.role || 'viewer'}
-                  className="w-full px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-gold-400/50 transition-colors">
+                  className="w-full px-3 py-2.5 rounded-lg bg-dark-surface border border-dark-border text-steel-200 text-sm focus:outline-none focus:border-orange-400/50 transition-colors">
                   <option value="viewer">Viewer</option>
                   <option value="analyst">Analyst</option>
                   <option value="client">Client</option>
@@ -172,7 +172,7 @@ export default function UsersPage() {
               </div>
               <div className="flex gap-3 pt-2">
                 <button type="button" onClick={() => setShowForm(false)} className="flex-1 py-2.5 rounded-lg border border-dark-border text-steel-400 text-sm hover:border-steel-500 transition-colors">Cancel</button>
-                <button type="submit" className="flex-1 py-2.5 rounded-lg bg-gold-400 text-steel-900 text-sm font-semibold hover:bg-gold-300 transition-colors">{editUser ? 'Save Changes' : 'Create User'}</button>
+                <button type="submit" className="flex-1 py-2.5 rounded-lg bg-orange-400 text-steel-900 text-sm font-semibold hover:bg-orange-300 transition-colors">{editUser ? 'Save Changes' : 'Create User'}</button>
               </div>
             </form>
           </div>
