@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:        #ffffff;
+  --surface:   #f8f9fa;
+  --card:      #ffffff;
+  --border:    #e9ecef;
+  --text:      #0d0f12;
+  --muted:     #6c757d;
+  --gold:      #d4a520;
+  --gold-light:#e8c04a;
+  --gold-dark: #8f6a0c;
+  --scrollbar-thumb: #d4a520;
+  --scrollbar-track: #f0f0f0;
+}
+
+.dark {
+  --bg:        #0a0c0f;
+  --surface:   #111418;
+  --card:      #161b22;
+  --border:    #21262d;
+  --text:      #e6edf3;
+  --muted:     #8b949e;
+  --gold:      #d4a520;
+  --gold-light:#f2d98a;
+  --gold-dark: #b88a10;
+  --scrollbar-thumb: #d4a520;
+  --scrollbar-track: #1c2128;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #d4a520 0%, #f2d98a 50%, #b88a10 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212,165,32,0.15);
+}
+
+.dark .glass {
+  background: rgba(22,27,34,0.8);
+}
+
+.seismic-bg {
+  background-image:
+    linear-gradient(rgba(212,165,32,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,165,32,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.section-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.section-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
